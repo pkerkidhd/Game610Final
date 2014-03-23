@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	private float playerSpeed;
 	private Vector3 movePoint;
-	public Camera camera;
 
 	public enum states { Idle, Moving, Attacking, Dead }
 	public states currentState;
@@ -39,17 +38,24 @@ public class PlayerMovement : MonoBehaviour {
 		switch(currentState) {
 		case states.Idle:
 			Debug.Log("Idle");
-				currentState = states.Idle;
+			animation.CrossFade("soldierIdle");
+			currentState = states.Idle;
 			break;
 		case states.Moving:
 			Debug.Log("Moving");
-				currentState = states.Moving;
+			animation.CrossFade("soldierRun");
+			currentState = states.Moving;
+			break;
+		case states.Attacking:
+			Debug.Log("Attacking");
+			animation.CrossFade("soldierFiring");
+			currentState = states.Attacking;
 			break;
 		}
 	}
 
 	void checkInput() {
-		if (Input.GetMouseButton(1))
+		if (Input.GetMouseButton(0))
 		{
 			RaycastHit hit;
 			Ray ray = (Camera.main.ScreenPointToRay(Input.mousePosition));
@@ -65,6 +71,11 @@ public class PlayerMovement : MonoBehaviour {
 					currentState = states.Moving;
 				}
 			}                   
+		}
+		if (Input.GetMouseButton(1)) {
+			currentState = states.Attacking;
+		} else if (Input.GetMouseButtonUp(1)) {
+			currentState = states.Idle;
 		}
 	}
 }
