@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour {
 			} else if(moveDist < 1.0f){
 				currentState = states.Idle;
 			}
+		} else if (currentState == states.Attacking) {
+
 		}
 	}
 

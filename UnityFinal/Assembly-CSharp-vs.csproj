@@ -48,8 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\GOD.cs" />
      <Compile Include="Assets\Scripts\Culling\Culling.cs" />
+     <Compile Include="Assets\Scripts\Player\BulletCollision.cs" />
      <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\ShootingScript.cs" />
      <None Include="Assets\Cartoon Soldier\Readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
