@@ -17,7 +17,8 @@ public class BoidFollowPlayer : MonoBehaviour {
 		Debug.Log(dist);
 		if( dist > 1)
 		{
-			transform.LookAt(playerObject.transform);
+			//transform.LookAt(playerObject.transform);
+			//transform.position();
 			transform.Translate(speed * Vector3.forward*Time.deltaTime);
 		}
 	}
