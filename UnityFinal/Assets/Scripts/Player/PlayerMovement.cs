@@ -39,17 +39,17 @@ public class PlayerMovement : MonoBehaviour {
 	void checkState() {
 		switch(currentState) {
 		case states.Idle:
-			Debug.Log("Idle");
+		//	Debug.Log("Idle");
 			animation.CrossFade("soldierIdle");
 			currentState = states.Idle;
 			break;
 		case states.Moving:
-			Debug.Log("Moving");
+//			Debug.Log("Moving");
 			animation.CrossFade("soldierRun");
 			currentState = states.Moving;
 			break;
 		case states.Attacking:
-			Debug.Log("Attacking");
+		//	Debug.Log("Attacking");
 			animation.CrossFade("soldierFiring");
 			currentState = states.Attacking;
 			break;
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour {
 			
 			if (Physics.Raycast(ray, out hit))
 			{
-				Debug.Log("Hit: " + hit.transform.name);
+//				Debug.Log("Hit: " + hit.transform.name);
 				if (hit.transform.name == "Ground")
 				{
 					movePoint = new Vector3(hit.point.x, 0, hit.point.z);

@@ -90,6 +90,7 @@
      <Compile Include="Assets\Cartoon Soldier\Scripts\soldier\weaponController.js" />
      <Compile Include="Assets\TW3D\Flies\sources\FlyBehav.js" />
      <Compile Include="Assets\TW3D\Flies\sources\FlyWings.js" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Cartoon Soldier\Readme.txt" />
   </ItemGroup>
   <ItemGroup>

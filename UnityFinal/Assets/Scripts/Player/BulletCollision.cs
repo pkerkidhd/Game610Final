@@ -3,6 +3,8 @@ using System.Collections;
 
 public class BulletCollision : MonoBehaviour {
 
+	public GameObject explosion;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -16,6 +18,14 @@ public class BulletCollision : MonoBehaviour {
 	void OnCollisionEnter (Collision Target) {
 		if (Target.gameObject.tag == "Wall") {
 			Destroy(this.gameObject);
+			Destroy(Target.gameObject);
 		}
+
+		if (Target.gameObject.tag == "enemy") {
+			Instantiate(explosion, Target.transform.position, Quaternion.identity);
+			Destroy(this.gameObject);
+			Destroy(Target.gameObject);
+		}
+
 	}
 }

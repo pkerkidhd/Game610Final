@@ -9,6 +9,9 @@ public class usingkd : MonoBehaviour {
 	public GameObject player;
 	public GameObject[] enemies;
 
+	private Vector3 moveDirection = Vector3.zero;
+	public float speed = 6.0F;
+
 	// Use this for initialization
 	void Start () {
 		enemies = GameObject.FindGameObjectsWithTag("enemy");
@@ -21,7 +24,9 @@ public class usingkd : MonoBehaviour {
 			pointsArray[i] = enemies[i].transform.position;
 		}
 		nearest = tree.FindNearest(player.transform.position);
-	
+
+		enemies[nearest].GetComponent<Move>().enabled = true;
+		//enemies[nearest].GetComponent<Shoot>().enabled = true;
 		Debug.Log(nearest);
 	}
 }

@@ -52,6 +52,11 @@
      <Compile Include="Assets\Scripts\Boid\Flocking\BoidFollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Boid\Flocking\BoidWatcher.cs" />
      <Compile Include="Assets\Scripts\Culling\Culling.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyBullet.cs" />
+     <Compile Include="Assets\Scripts\Enemy\LOD.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Move.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Shoot.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Menu.cs" />
      <Compile Include="Assets\Scripts\Player\BulletCollision.cs" />
      <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
@@ -59,6 +64,7 @@
      <Compile Include="Assets\Scripts\Room\CreateFlies.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\usingkd.cs" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Cartoon Soldier\Readme.txt" />
   </ItemGroup>
   <ItemGroup>
